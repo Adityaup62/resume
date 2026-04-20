@@ -163,6 +163,13 @@ nav a{
     transition: 0.3s;
     box-shadow: 0 0 20px rgba(0,0,0,0.2);
 }
+.line {
+  border: none;
+  height: 2px;
+  background: linear-gradient(to right, transparent, white, transparent);
+  margin: 30px auto;
+  width: 80%;
+}
 footer{
   text-align:center;
   padding:10px;
