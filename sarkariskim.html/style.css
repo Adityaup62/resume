@@ -111,7 +111,7 @@ nav a{
 
 .card{max-width: 350px;   /* 👈 control size */
   margin: auto;
-    width: 400px;
+    width: 300px;
     border: 2px solid #ddd;
      border-radius:20px 20px 0 0;
     overflow: hidden;
