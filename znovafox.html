@@ -1,44 +1,304 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Login - ZNovaFox</title>
+
+<title>ZNovaFox</title>
 
 <link rel="stylesheet" href="assets/css/style.css">
-<link rel="stylesheet" href="assets/css/login.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
 </head>
 
 <body>
+<div class="app">
+<header class="header">
 
-<div class="login-wrapper">
+<div class="logo">
+    <i class="fa-solid fa-shield-cat"></i>
+    <span>ZNovaFox</span>
+</div>
 
-<div class="login-box">
+<button class="menu-toggle" id="menuToggle">
+    <i class="fa-solid fa-bars"></i>
+</button>
 
-<h2>Welcome Back 👋</h2>
-<p>Login to continue to ZNovaFox</p>
+<nav id="navbar">
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="game.html">Games</a></li>
+        <li><a href="tools.html">Tools</a></li>
+        <li><a href="software.html">Software</a></li>
+        <li><a href="ai-tools.html">AI</a></li>
+        <li><a href="sarkari.html">Sarkari</a></li>
+        <li><a href="tech.html">Tech</a></li>
+    </ul>
+</nav>
 
-<form>
+<div class="header-right">
 
-<input type="text" placeholder="Username or Email">
+<button class="icon-btn">
+<i class="fa-solid fa-magnifying-glass"></i>
+</button>
 
-<input type="password" placeholder="Password">
+<button class="icon-btn">
+<i class="fa-solid fa-bell"></i>
+</button>
 
-<button type="submit">Login</button>
-
-<div class="extra">
-
-<a href="#">Forgot Password?</a>
-<a href="register.html">Create Account</a>
+<button class="login-btn">
+<a href="login.html">Login</a>
+</button>
 
 </div>
 
-</form>
+</header>
+<section class="hero">
+    
 
+<div class="hero-text">
+
+<h1>One Platform.<br>Endless Possibilities.</h1>
+
+<p>
+
+Games, Tools, Sarkari, 
+
+Software, AI Tools and more.
+
+</p>
+
+<button>Explore Now</button>
+
+</div>
+
+<div class="hero-image">
+
+<img src="assets/images/fox.png" alt="Fox">
+
+</div>
+
+</section>
+<!-- ================= Search Section ================= -->
+
+<section class="search-section">
+
+<div class="search-box">
+
+<input type="text" placeholder="Search Games, Apps, Tools...">
+
+<button>
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+</button>
+
+</div>
+
+</section>
+
+
+<!-- ================= Categories ================= -->
+
+<section class="categories">
+
+<div class="card">
+
+<i class="fa-solid fa-gamepad"></i>
+
+<h3>Games</h3>
+
+<p>Download Latest Games</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-screwdriver-wrench"></i>
+
+<h3>Tools</h3>
+
+<p>Useful Online Tools</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-robot"></i>
+
+<h3>AI Tools</h3>
+
+<p>Powerful AI Collection</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-mobile-screen-button"></i>
+
+<h3>Apps</h3>
+
+<p>Latest Android Apps</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-laptop-code"></i>
+
+<h3>Software</h3>
+
+<p>Windows Software</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-newspaper"></i>
+
+<h3>Sarkari</h3>
+
+<p>Jobs & Results</p>
+
+</div>
+
+</section>
+<!-- ================= Latest Updates ================= -->
+
+<section class="latest-updates">
+
+<div class="section-title">
+<h2>📰 Latest Updates</h2>
+<p>Latest Sarkari Jobs, Tech News & AI Updates</p>
+</div>
+
+<div class="updates-grid">
+
+<div class="update-card">
+<span class="badge">NEW</span>
+<h3>SSC MTS 2026 Notification Released</h3>
+<p>Check eligibility, important dates and apply online.</p>
+<a href="#">Read More →</a>
+</div>
+
+<div class="update-card">
+<span class="badge">TRENDING</span>
+<h3>Top 10 AI Tools You Should Try</h3>
+<p>Best free AI tools for students and professionals.</p>
+<a href="#">Read More →</a>
+</div>
+
+<div class="update-card">
+<span class="badge">HOT</span>
+<h3>GTA VI Latest Update</h3>
+<p>Latest gameplay, trailers and download information.</p>
+<a href="#">Read More →</a>
 </div>
 
 </div>
 
+</section>
+<!-- ================= POPULAR TOOLS ================= -->
+
+<section class="popular-tools">
+
+<div class="section-title">
+
+<h2>🛠 Popular Tools</h2>
+
+<p>Most Used Online Tools</p>
+
+</div>
+
+<div class="tool-grid">
+
+<div class="tool-card">
+<i class="fa-solid fa-file-pdf"></i>
+<h3>PDF Tools</h3>
+<p>Merge, Split, Compress PDF</p>
+<a href="#">Open Tool</a>
+</div>
+
+<div class="tool-card">
+<i class="fa-solid fa-image"></i>
+<h3>Image Tools</h3>
+<p>Resize, Compress & Convert</p>
+<a href="#">Open Tool</a>
+</div>
+
+<div class="tool-card">
+<i class="fa-solid fa-qrcode"></i>
+<h3>QR Generator</h3>
+<p>Create QR Codes Instantly</p>
+<a href="#">Open Tool</a>
+</div>
+
+<div class="tool-card">
+<i class="fa-solid fa-font"></i>
+<h3>Text Tools</h3>
+<p>Stylish Fonts & Text Generator</p>
+<a href="#">Open Tool</a>
+</div>
+
+</div>
+
+</section>
+<script src="assets/js/script.js"></script>
+</div>
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+<div class="footer-container">
+
+<div class="footer-about">
+<h2>ZNovaFox</h2>
+<p>
+One Platform for Games, Tools, AI, Software,
+Apps, Sarkari Jobs and Tech Updates.
+</p>
+</div>
+
+<div class="footer-links">
+<h3>Quick Links</h3>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">Games</a></li>
+<li><a href="#">Tools</a></li>
+<li><a href="#">AI Tools</a></li>
+<li><a href="#">Sarkari</a></li>
+</ul>
+</div>
+
+<div class="footer-links">
+<h3>Resources</h3>
+<ul>
+<li><a href="#">Privacy Policy</a></li>
+<li><a href="#">Terms</a></li>
+<li><a href="#">Disclaimer</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+</div>
+
+</div>
+
+<div class="copyright">
+
+© 2026 ZNovaFox. All Rights Reserved.
+
+</div>
+
+</footer>
 </body>
+
 </html>
