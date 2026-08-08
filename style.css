@@ -1,7 +1,18 @@
 /* ===========================
    ZNovaFox Global CSS
 =========================== */
-
+ html, body {
+        margin: 0;
+        padding: 0;
+        min-width: 1200px;
+    }
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .container {
+        width: 1200px;
+        margin: auto;
+    }
 *{
     margin:0;
     padding:0;
