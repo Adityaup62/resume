@@ -1,304 +1,418 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Portfolio</title>
 
-<title>ZNovaFox</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="assets/css/style.css">
+<style>
+    .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 8%;
+  background: #0a3d62;
+  color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+/* Logo */
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+}
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+/* Menu */
+.menu {
+  list-style: none;
+  display: flex;
+}
 
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+.menu li {
+  margin: 0 15px;
+}
 
+.menu a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  transition: 0.3s;
+}
+
+/* Underline animation */
+.menu a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: red;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s;
+}
+
+.menu a:hover::after {
+  width: 100%;
+}
+
+/* Buttons */
+.auth-buttons a {
+  margin-left: 10px;
+  padding: 6px 12px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* Sign In */
+.signin {
+  color: white;
+  border: 1px solid white;
+}
+
+.signin:hover {
+  background: white;
+  color: black;
+}
+
+/* Sign Up */
+.signup {
+  background: red;
+  color: white;
+}
+
+.signup:hover {
+  background: darkred;
+}
+
+/* Header adjust */
+header {
+  margin-top: 70px;
+}
+
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+
+body{
+  background:#0f172a;
+  color:white;
+  scroll-behavior:smooth;
+}
+
+header{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  background:linear-gradient(135deg,#0f172a,#1e293b);
+  text-align:center;
+  padding:20px;
+}
+
+header img{
+  width:220px;
+  border-radius:50%;
+  border:4px solid #38bdf8;
+  animation: float 3s infinite ease-in-out;
+}
+
+@keyframes float{
+  0%{transform:translateY(0)}
+  50%{transform:translateY(-10px)}
+  100%{transform:translateY(0)}
+}
+
+h1{
+  font-size:clamp(28px,5vw,42px);
+  color:#38bdf8;
+  margin-top:15px;
+}
+
+p{opacity:0.8;margin-top:10px;font-size:clamp(14px,2.5vw,18px);}
+
+.btn{
+  margin-top:20px;
+  padding:12px 25px;
+  background:#38bdf8;
+  color:black;
+  border-radius:6px;
+  text-decoration:none;
+  transition:0.3s;
+  display:inline-block;
+}
+
+.btn:hover{
+  transform:scale(1.1);
+  background:#0ea5e9;
+}
+
+section{padding:60px 8%;}
+
+h2{
+  text-align:center;
+  margin-bottom:40px;
+  color:#38bdf8;
+  font-size:clamp(22px,4vw,30px);
+}
+
+.about{
+  max-width:700px;
+  margin:auto;
+  text-align:center;
+}
+hr {
+  border: none;
+  height: 2px;
+ 
+  background: #794848;
+  margin: 20px 0;
+}
+
+.projects{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+.project img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card{
+  background:#1e293b;
+  border-radius:15px;
+  overflow:hidden;
+  transition:0.4s;
+}
+
+.card:hover{
+  transform:translateY(-10px) scale(1.02);
+  box-shadow:0 15px 30px rgba(0,0,0,0.6);
+}
+
+.card img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+}
+
+.card-content{
+  padding:15px;
+}
+
+.buttons a{
+  display:inline-block;
+  margin-top:10px;
+  margin-right:5px;
+  padding:8px 14px;
+  border-radius:5px;
+  text-decoration:none;
+  font-size:14px;
+  transition:0.3s;
+}
+
+/* Live Demo Button */
+.live-btn{
+  background:#38bdf8;
+  color:black;
+}
+
+.live-btn:hover{
+  background:red;
+  color:white;
+  transform:scale(1.1);
+}
+
+/* Code Button */
+.code-btn{
+  background:#64748b;
+  color:white;
+}
+
+.code-btn:hover{
+  background:#94a3b8;
+}
+
+.hidden{
+  opacity:0;
+  transform:translateY(40px);
+  transition:all 0.8s ease;
+}
+
+.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+footer {
+  background: #0a3d62;
+  color: white;
+  text-align: center;
+  padding: 30px;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+footer a:hover {
+  color: red;
+}
+</style>
 </head>
 
 <body>
-<div class="app">
-<header class="header">
+   <nav class="navbar">
+  <h2 class="Aditya">MyPortfolio</h2>
 
-<div class="logo">
-    <i class="fa-solid fa-shield-cat"></i>
-    <span>ZNovaFox</span>
-</div>
+  <ul class="menu">
+    <li><a href="#">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+     <li><a href="#contact">More</a></li>
+  </ul>
 
-<button class="menu-toggle" id="menuToggle">
-    <i class="fa-solid fa-bars"></i>
-</button>
-
-<nav id="navbar">
-    <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="game.html">Games</a></li>
-        <li><a href="tools.html">Tools</a></li>
-        <li><a href="software.html">Software</a></li>
-        <li><a href="ai-tools.html">AI</a></li>
-        <li><a href="sarkari.html">Sarkari</a></li>
-        <li><a href="tech.html">Tech</a></li>
-    </ul>
+  <div class="auth-buttons">
+    <a href="sign in.html" class="signin">Sign In</a>
+    <a href="sign up.html" class="signup">Sign Up</a>
+  </div>
 </nav>
-
-<div class="header-right">
-
-<button class="icon-btn">
-<i class="fa-solid fa-magnifying-glass"></i>
-</button>
-
-<button class="icon-btn">
-<i class="fa-solid fa-bell"></i>
-</button>
-
-<button class="login-btn">
-<a href="login.html">Login</a>
-</button>
-
-</div>
-
+<header>
+  <img src="photo.png.jpeg" alt="meri photo">
+  <h1>Aditya Vishwakarma</h1>
+  <p>Frontend Developer | Student | Aspiring & Building Real Project <br> Web Developer</p>
+  <a href="#projects" class="btn">View My Work</a>
 </header>
-<section class="hero">
-    
 
-<div class="hero-text">
-
-<h1>One Platform.<br>Endless Possibilities.</h1>
-
-<p>
-
-Games, Tools, Sarkari, 
-
-Software, AI Tools and more.
-
+<section class="hidden">
+  <h2>About Me</h2>
+  <div class="about">
+    <p>
+I am a web development student who loves building websites. 
+I am learning HTML, CSS, and JavaScript within backend language and creating projects to improve my skills. 
+My goal is to become a professional web developer as well as  hands-on project experience. 
+Focused on improving skills and creating real-world applications.
 </p>
+  </div>
+</section><hr>
 
-<button>Explore Now</button>
+<section id="projects" class="hidden">
+  <h2>My Projects</h2>
 
-</div>
+  <div class="projects">
 
-<div class="hero-image">
+    <!-- 6 Projects -->
 
-<img src="assets/images/fox.png" alt="Fox">
+    <div class="card">
+      <img src="project 1.png">
+      <div class="card-content">
+        <h3>Future Naukri</h3>
+        <div class="buttons">
+          <a href="Naukari.html" class="live-btn">Live Demo</a>
+          <a href="https://github.com/Aditya222142/resume/blob/main/Naukari.html" class="code-btn">Source Code</a>
+        </div>
+      </div>
+    </div>
 
-</div>
+    <div class="card">
+      <img src="project 2.png">
+      <div class="card-content">
+        <h3>Account Create</h3>
+        <div class="buttons">
+          <a href="signinBox.html" class="live-btn">Live Demo</a>
+          <a href="https://github.com/Aditya222142/resume/blob/main/signinBox.html" class="code-btn">Source Code</a>
+        </div>
+      </div>
+    </div>
 
+    <div class="card">
+      <img src="project 3.png">
+      <div class="card-content">
+        <h3>Fee Management</h3>
+        <div class="buttons">
+          <a href="collage.html" class="live-btn">Live Demo</a>
+          <a href="https://raw.githubusercontent.com/Aditya222142/resume/refs/heads/main/collage.html" class="code-btn">Source Code</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="Cargame.png">
+      <div class="card-content">
+        <h3>Ferrari racer pro</h3>
+        <div class="buttons">
+          <a href="Cargame.html" class="live-btn">Live Demo</a>
+          <a href=" https://www.google.com">Source Code</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/project5.png">
+      <div class="card-content">
+        <h3>Project 5</h3>
+        <div class="buttons">
+          <a href="sarkariskim.html/sarkariskim.html" class="live-btn">Live Demo</a>
+          <a href="#" class="code-btn">Source Code</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/project6.png">
+      <div class="card-content">
+        <h3>Project 6</h3>
+        <div class="buttons">
+          <a href="#" class="live-btn">Live Demo</a>
+          <a href="#" class="code-btn">Source Code</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </section>
-<!-- ================= Search Section ================= -->
 
-<section class="search-section">
+<footer>
 
-<div class="search-box">
+  <h3>Aditya Vishwakarma</h3>
 
-<input type="text" placeholder="Search Games, Apps, Tools...">
+  <p>Frontend Developer | Student</p>
 
-<button>
+  <p>Email : vishwakarmaaditya1096@email.com</p>
 
-<i class="fa-solid fa-magnifying-glass"></i>
+  <div>
+    <a href="#">GitHub</a> |
+    <a href="#">whatsapp</a> |
+    <a href="#">LinkedIn</a>
+  </div>
 
-</button>
-
-</div>
-
-</section>
-
-
-<!-- ================= Categories ================= -->
-
-<section class="categories">
-
-<div class="card">
-
-<i class="fa-solid fa-gamepad"></i>
-
-<h3>Games</h3>
-
-<p>Download Latest Games</p>
-
-</div>
-
-<div class="card">
-
-<i class="fa-solid fa-screwdriver-wrench"></i>
-
-<h3>Tools</h3>
-
-<p>Useful Online Tools</p>
-
-</div>
-
-<div class="card">
-
-<i class="fa-solid fa-robot"></i>
-
-<h3>AI Tools</h3>
-
-<p>Powerful AI Collection</p>
-
-</div>
-
-<div class="card">
-
-<i class="fa-solid fa-mobile-screen-button"></i>
-
-<h3>Apps</h3>
-
-<p>Latest Android Apps</p>
-
-</div>
-
-<div class="card">
-
-<i class="fa-solid fa-laptop-code"></i>
-
-<h3>Software</h3>
-
-<p>Windows Software</p>
-
-</div>
-
-<div class="card">
-
-<i class="fa-solid fa-newspaper"></i>
-
-<h3>Sarkari</h3>
-
-<p>Jobs & Results</p>
-
-</div>
-
-</section>
-<!-- ================= Latest Updates ================= -->
-
-<section class="latest-updates">
-
-<div class="section-title">
-<h2>📰 Latest Updates</h2>
-<p>Latest Sarkari Jobs, Tech News & AI Updates</p>
-</div>
-
-<div class="updates-grid">
-
-<div class="update-card">
-<span class="badge">NEW</span>
-<h3>SSC MTS 2026 Notification Released</h3>
-<p>Check eligibility, important dates and apply online.</p>
-<a href="#">Read More →</a>
-</div>
-
-<div class="update-card">
-<span class="badge">TRENDING</span>
-<h3>Top 10 AI Tools You Should Try</h3>
-<p>Best free AI tools for students and professionals.</p>
-<a href="#">Read More →</a>
-</div>
-
-<div class="update-card">
-<span class="badge">HOT</span>
-<h3>GTA VI Latest Update</h3>
-<p>Latest gameplay, trailers and download information.</p>
-<a href="#">Read More →</a>
-</div>
-
-</div>
-
-</section>
-<!-- ================= POPULAR TOOLS ================= -->
-
-<section class="popular-tools">
-
-<div class="section-title">
-
-<h2>🛠 Popular Tools</h2>
-
-<p>Most Used Online Tools</p>
-
-</div>
-
-<div class="tool-grid">
-
-<div class="tool-card">
-<i class="fa-solid fa-file-pdf"></i>
-<h3>PDF Tools</h3>
-<p>Merge, Split, Compress PDF</p>
-<a href="#">Open Tool</a>
-</div>
-
-<div class="tool-card">
-<i class="fa-solid fa-image"></i>
-<h3>Image Tools</h3>
-<p>Resize, Compress & Convert</p>
-<a href="#">Open Tool</a>
-</div>
-
-<div class="tool-card">
-<i class="fa-solid fa-qrcode"></i>
-<h3>QR Generator</h3>
-<p>Create QR Codes Instantly</p>
-<a href="#">Open Tool</a>
-</div>
-
-<div class="tool-card">
-<i class="fa-solid fa-font"></i>
-<h3>Text Tools</h3>
-<p>Stylish Fonts & Text Generator</p>
-<a href="#">Open Tool</a>
-</div>
-
-</div>
-
-</section>
-<script src="assets/js/script.js"></script>
-</div>
-<!-- ================= FOOTER ================= -->
-
-<footer class="footer">
-
-<div class="footer-container">
-
-<div class="footer-about">
-<h2>ZNovaFox</h2>
-<p>
-One Platform for Games, Tools, AI, Software,
-Apps, Sarkari Jobs and Tech Updates.
-</p>
-</div>
-
-<div class="footer-links">
-<h3>Quick Links</h3>
-<ul>
-<li><a href="#">Home</a></li>
-<li><a href="#">Games</a></li>
-<li><a href="#">Tools</a></li>
-<li><a href="#">AI Tools</a></li>
-<li><a href="#">Sarkari</a></li>
-</ul>
-</div>
-
-<div class="footer-links">
-<h3>Resources</h3>
-<ul>
-<li><a href="#">Privacy Policy</a></li>
-<li><a href="#">Terms</a></li>
-<li><a href="#">Disclaimer</a></li>
-<li><a href="#">Contact</a></li>
-</ul>
-</div>
-
-</div>
-
-<div class="copyright">
-
-© 2026 ZNovaFox. All Rights Reserved.
-
-</div>
+  <p>© 2026 All Rights Reserved</p>
 
 </footer>
-</body>
 
+<script>
+const observer = new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+});
+
+const hiddenElements = document.querySelectorAll('.hidden');
+hiddenElements.forEach(el=>observer.observe(el));
+</script>
+
+</body>
 </html>
